@@ -1,9 +1,13 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>pagina3</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/principal"></ion-back-button>
+     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <h1>{{ id }}</h1>
+  <ion-button routerLink="/principal" routerDirection="back">Volver a home</ion-button>
 </ion-content>
