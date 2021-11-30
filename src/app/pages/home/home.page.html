@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ReorderList</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-list>
+      <ion-reorder-group (ionItemReorder)="onRenderItems($event)" disabled="false">
+  
+        <ion-item *ngFor="let item of listItems">
+          <ion-label>
+            {{item}}
+          </ion-label>
+          <ion-reorder></ion-reorder>
+        </ion-item>
+  
+      </ion-reorder-group>
+    </ion-list>
+    <ion-list text-center>
+      <ion-button (click)="getList()">
+        Get Updated List
+      </ion-button>
+    </ion-list>
+  </div>
+</ion-content>
